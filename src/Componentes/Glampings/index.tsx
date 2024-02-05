@@ -7,8 +7,8 @@ import { useState } from 'react';
 import { FaHeart, FaStar } from "react-icons/fa";
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { GoDot } from "react-icons/go";
-import { useContext  } from 'react';
-import {ContextoGlamping} from "../../Contexto/index"
+// import { useContext  } from 'react';
+// import {ContextoGlamping} from "../../Contexto/index"
 
 const Glampings = () => {
   const fotosEinfo = [
@@ -29,7 +29,7 @@ const Glampings = () => {
     { titulo: "Paihuen", imagen: g3, costo:305000, fecha:'21 enero', distancia:400 }
   ];
 
-const almacenVar = useContext(ContextoGlamping)
+// const almacenVar = useContext(ContextoGlamping)
 
 const [corazonRojo, setCorazonRojo] = useState(Array(fotosEinfo.length).fill(false));
 
@@ -37,7 +37,7 @@ const handleCorazonClick = (index:number) => {
   const newCorazonRojo = [...corazonRojo];
   newCorazonRojo[index] = !newCorazonRojo[index];
   setCorazonRojo(newCorazonRojo);
-  almacenVar.setEsFavorito(true)
+  // almacenVar?.setEsFavorito(true)
 };
 
 // const obtenerResultado = () => almacenVar.esFavorito ? '¡Es favorito!' : 'No es favorito';

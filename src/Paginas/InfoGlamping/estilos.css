@@ -1,0 +1,89 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.contenedorInfoGlamping{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorDetalleGlamping{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;    
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+    width: 100%;
+    height: 100%;
+    flex-wrap:nowrap;
+    
+}
+
+.barraSuperior {
+    display: flex;
+    width: 100%;
+    max-width: 1294px;
+    min-width: 350px;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.barraSuperior h3 {
+    padding: 0 20px 0 20px;
+}
+
+.barraSuperiorDerecha{
+    display: flex;
+    align-items: center;
+    
+}
+
+.barraSuperiorDerecha >*{
+    padding: 0 20px 0 20px;
+}
+
+.barraMedia{
+    width: 100%;
+    max-width: 1294px;
+    min-width: 350px;
+    height: 500px;
+}
+
+.alto{
+    grid-row: span 2;
+}
+
+.contenedorImagenes{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 300px;
+    gap: 10px;
+    padding: 10px;
+    align-items: start;
+}
+
+.fotoDetalle {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border: 1px solid;
+    border-radius: 15px;
+}
+
+@media (max-width: 544px) {
+
+    .infoBarraSuperior{
+        display: none;
+    }
+
+    .alto{
+        grid-row: span 1;
+    }
+
+}

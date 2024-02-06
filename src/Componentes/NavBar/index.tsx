@@ -11,7 +11,7 @@ import { TbFilterSearch } from "react-icons/tb";
 const NavBar = () => {
   const almacenVar = useContext(ContextoGlamping)
   return (
-    <div className='barNav'>
+    <nav className='barNav'>
 
       {/* Parte Izquierda */}
         <div className="contenedorizquierdo">
@@ -65,7 +65,7 @@ const NavBar = () => {
 
         </div>
 
-      </div>
+      </nav>
     );
 };
 

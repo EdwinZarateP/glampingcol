@@ -6,7 +6,10 @@ import { createContext, useState, ReactNode, Dispatch, SetStateAction } from 're
 // 3. Antes del return del componente, cree lo siguiente: const almacenVar = useContext(ContextoGlamping)
 // 4. Use la variable que desee del ProveedorVariables, por ejemplo: almacenVar.esFavorito
 
-// Define la interfaz para el contexto
+//-------------------------------------------------------------------------------------
+// 1. Define la interfaz para el contexto
+//-------------------------------------------------------------------------------------
+
 interface ContextProps {
   esFavorito: boolean;
   setEsFavorito: Dispatch<SetStateAction<boolean>>;
@@ -14,6 +17,8 @@ interface ContextProps {
   setEstaAbiertoFiltroAvanzado: Dispatch<SetStateAction<boolean>>;
   abrirFiltroAvanzado: () => void; 
   cerrarFiltroAvanzado: () => void; 
+  glampingSeleccionado: Record<string, any>; // Tipo genérico para un objeto con cualquier propiedad
+  setGlampingSeleccionado: Dispatch<SetStateAction<Record<string, any>>>;
 }
 
 // Crea el contexto con un valor inicial undefined
@@ -24,22 +29,35 @@ interface ProveedorVariablesProps {
   hijo: ReactNode;
 }
 
-// Proveedor de variables que utiliza el contexto
+//-------------------------------------------------------------------------------------
+// 2. Proveedor de variables que utiliza el contexto 
+//-------------------------------------------------------------------------------------
+
 export const ProveedorVariables: React.FC<ProveedorVariablesProps> = ({ hijo }) => {
   // Estado para la variable esFavorito
   const [esFavorito, setEsFavorito] = useState(false);
+
+  // Estado para abrir y cerrar el multifiltro
   const [estaAbiertoFiltroAvanzado, setEstaAbiertoFiltroAvanzado] = useState(false);
   const abrirFiltroAvanzado=()=>setEstaAbiertoFiltroAvanzado(true);
   const cerrarFiltroAvanzado=()=>setEstaAbiertoFiltroAvanzado(false);
 
-  // Crea el objeto de contexto con los valores y funciones necesarios que quieres proveer
+  // Estado para mostrar en /InfoGlamping todo del Glamping seleccionado
+  const [glampingSeleccionado, setGlampingSeleccionado]= useState({});
+
+  //-------------------------------------------------------------------------------------
+  // 3. Crea el objeto de contexto con los valores y funciones necesarios que quieres proveer
+  //-------------------------------------------------------------------------------------
+
   const contextValue: ContextProps = {
     esFavorito,
     setEsFavorito,
     estaAbiertoFiltroAvanzado,
     setEstaAbiertoFiltroAvanzado,
     abrirFiltroAvanzado,
-    cerrarFiltroAvanzado
+    cerrarFiltroAvanzado,
+    glampingSeleccionado,
+    setGlampingSeleccionado
   };
 
   // Renderiza el proveedor de contexto con el valor proporcionado

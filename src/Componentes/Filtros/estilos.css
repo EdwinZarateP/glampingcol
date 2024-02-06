@@ -28,13 +28,6 @@
   scrollbar-color: transparent transparent; /* Color del scrollbar: thumb-color track-color */
 }
 
-/* .contenedorFiltrosLista::-webkit-scrollbar {
-  height: 0px;
-} */
-
-/* .contenedorFiltrosLista::-webkit-scrollbar-thumb {
-  background-color: transparent;
-} */
 
 .flecha-izquierda,
 .flecha-derecha {

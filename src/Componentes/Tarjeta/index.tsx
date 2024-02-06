@@ -1,17 +1,27 @@
 import './estilos.css'
+import { Link } from 'react-router-dom';
 import { FaHeart, FaStar } from "react-icons/fa";
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { useContext } from 'react';
+import { ContextoGlamping } from '../../Contexto/index'
 
 const Tarjeta = (data: any) => {
 
-  
+  const almacenVar = useContext(ContextoGlamping)
+
+  const irInfoGlamping = (infoGlamping: any) =>{
+    almacenVar?.setGlampingSeleccionado(infoGlamping)
+  }
 
   return (
     <div className="contenedorTarjeta">
 
       <figure className='contenedorImagen'>
-        <img className='foto' src={data.data.image} alt={data.data.title} />
         
+        <Link to="/InfoGlamping">
+        <img className='foto' src={data.data.image} alt={data.data.title} onClick={() =>irInfoGlamping(data.data)} />
+        </Link>
+
         <div className='favorito'>
           <FaHeart />
         </div>
@@ -44,8 +54,8 @@ const Tarjeta = (data: any) => {
         </div>
         
       </p>
-        
     </div>
+    
   );
 };
 

@@ -10,7 +10,7 @@ const FiltroAvanzado = () => {
   return (
     <aside className={`${almacenVar?.estaAbiertoFiltroAvanzado ? 'contenedorAsideAbierto' : 'contenedorAsideCerrado'}`}>
       <div className='contenedorFiltroAvanzado'>
-        <h2>filtros avanzados</h2> 
+        <h3>Filtros avanzados</h3> 
         <div className='iconoCerrar' onClick={()=>almacenVar?.cerrarFiltroAvanzado()}>
           <IoCloseSharp/>
         </div>

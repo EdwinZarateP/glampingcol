@@ -8,7 +8,7 @@ import './estilos.css'
 
 function Home () {
 
-  const [items, setItems]=useState(null)
+  const [items, setItems] = useState<any>(null);
   
   useEffect(()=>{
     fetch('https://fakestoreapi.com/products')
@@ -27,8 +27,8 @@ function Home () {
       {/* <Glampings/> */}
 
       <div className='contenedorTarjetas'>
-        {items ?.map(item=>(
-          <Tarjeta key={item.id} data={item}/>
+        {items?.map((item: any) => (
+          <Tarjeta key={item.id} data={item} />
         ))}
       </div>
 

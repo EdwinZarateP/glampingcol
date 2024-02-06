@@ -2,7 +2,7 @@ import './estilos.css'
 import { FaHeart, FaStar } from "react-icons/fa";
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from "react-icons/md";
 
-const Tarjeta = (data) => {
+const Tarjeta = (data: any) => {
   return (
     <div className="contenedorTarjeta">
 

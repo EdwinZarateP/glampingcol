@@ -37,10 +37,7 @@ const handleCorazonClick = (index:number) => {
   const newCorazonRojo = [...corazonRojo];
   newCorazonRojo[index] = !newCorazonRojo[index];
   setCorazonRojo(newCorazonRojo);
-  // almacenVar?.setEsFavorito(true)
 };
-
-// const obtenerResultado = () => almacenVar.esFavorito ? '¡Es favorito!' : 'No es favorito';
 
 return (
   <div className='contenedorPrincipalImagenes'>

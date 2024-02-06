@@ -2,11 +2,18 @@ body{
     margin: 0;
     padding: 0;
 }
+
 .contenedorInfoGlamping{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-left: 50px;
+    margin-right: 50px
+}
+
+.navBar{
+    width: 100%;
 }
 
 .contenedorDetalleGlamping{
@@ -20,7 +27,7 @@ body{
     width: 100%;
     height: 100%;
     flex-wrap:nowrap;
-    
+
 }
 
 .barraSuperior {
@@ -29,8 +36,7 @@ body{
     max-width: 1294px;
     min-width: 350px;
     justify-content: space-between;
-    align-items: center;
-    
+    align-items: center; 
 }
 
 .barraSuperior h3 {
@@ -40,50 +46,190 @@ body{
 .barraSuperiorDerecha{
     display: flex;
     align-items: center;
-    
+    font-weight: 600;
 }
 
 .barraSuperiorDerecha >*{
     padding: 0 20px 0 20px;
 }
 
+.nombreGlampingInferior{
+    display: none;
+}
+
 .barraMedia{
     width: 100%;
     max-width: 1294px;
-    min-width: 350px;
-    height: 500px;
+    min-width: 744px;
+    height: 420px;
 }
 
-.alto{
-    grid-row: span 2;
+.contenedorFotoDetalleMax{
+    display: none;
 }
 
 .contenedorImagenes{
     height: 100%;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-auto-rows: 300px;
-    gap: 10px;
-    padding: 10px;
-    align-items: start;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    grid-auto-rows: minmax(150px, auto);
+    grid-gap: 10px; 
 }
+
+.contenedorImagenes div:nth-child(1) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
 
 .fotoDetalle {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    border: 1px solid;
     border-radius: 15px;
 }
 
-@media (max-width: 544px) {
+.informacionGeneralGlamping{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    margin:10px;
+    font-family: Arial;
+}
 
-    .infoBarraSuperior{
+.informacionGeneralGlamping > * {
+    margin:2px;
+}
+
+.informacionGeneralGlamping > :nth-child(1){
+    font-weight: 600;
+}
+
+
+@media (max-width: 744px) {
+    
+    .contenedorInfoGlamping{
+        margin:0;
+    }
+
+    .navBar{
+    display: none;
+    }
+
+    .nombreGlampingSuperior{
+        display: none;
+    }
+
+    .barraMedia{
+        min-width: 350px;
+        height: 300px;
+        padding: 0;
+    }
+
+    .contenedorImagenes{
+        display: none;
+    }
+
+    .contenedorFotoDetalleMax{
+        display: flex;
+        position: relative;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    .iconoCorazon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin: 10px;
+        top: 10px;
+        right: 10px; 
+        background-color:rgb(242, 241, 241); 
+        font-size: 18px; 
+    }
+
+    .iconoCorazon:hover{
+        color:red;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.9);
+     }
+
+    .iconoCompartir{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin: 10px;
+        top: 10px;
+        right: 50px; 
+        background-color:rgb(242, 241, 241);  
+        font-size: 18px; 
+    }
+
+    .iconoCompartir:hover{
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.9);
+     }
+
+     .iconoRegresar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin: 10px;
+        top: 10px;
+        left: 30px; 
+        background-color:rgb(242, 241, 241); 
+        font-size: 28px; 
+    }
+
+    .iconoRegresar:hover{
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.9);
+     }
+
+     
+    .FotoDetalleMax {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 15px;
+    }
+
+    .nombreGlampingInferior{
+        display: flex;
+        height: 30px;
+        justify-content: left;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .contenedorDetalleGlamping{
+        margin-top: 0;  
+    }
+
+    .contenedorInfoBarraSuperior{
         display: none;
     }
 
     .alto{
         grid-row: span 1;
+    }
+
+    .contenedorImagenes {
+        grid-template-columns: 1fr 1fr;
     }
 
 }

@@ -1,5 +1,7 @@
 import logo from '../../Imagenes/logoColor.png';
 import './estilos.css'
+import { useContext } from 'react';
+import { ContextoGlamping } from '../../Contexto/index'
 import { BiWorld } from "react-icons/bi";
 import { FiMenu, FiSearch } from "react-icons/fi";
 import { AiOutlineUser } from "react-icons/ai";
@@ -7,6 +9,7 @@ import { GiCampingTent } from "react-icons/gi";
 import { TbFilterSearch } from "react-icons/tb";
 
 const NavBar = () => {
+  const almacenVar = useContext(ContextoGlamping)
   return (
     <div className='barNav'>
 
@@ -57,7 +60,7 @@ const NavBar = () => {
         </div>
 
         {/* Parte derecha multifiltro */}
-        <div className='multifiltroNav'>
+        <div className='multifiltroNav' onClick={()=>almacenVar?.abrirFiltroAvanzado()}>
         <TbFilterSearch />  
 
         </div>

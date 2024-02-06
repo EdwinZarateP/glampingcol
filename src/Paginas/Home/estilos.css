@@ -1,3 +1,9 @@
+.contenedorHome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 .contenedorTarjetas{
     display: flex;
     Justify-content: center;

@@ -1,8 +1,8 @@
 import NavBar from '../../Componentes/NavBar/index'
 import Filtros from '../../Componentes/Filtros/index'
-// import Glampings from '../../Componentes/Glampings/index'
 import Footer from '../../Componentes/Footer/index'
 import Tarjeta from '../../Componentes/Tarjeta/index'
+import FiltroAvanzado from '../../Componentes/FiltroAvanzado/index'
 import { useState , useEffect} from 'react' 
 import './estilos.css'
 
@@ -13,14 +13,12 @@ function Home () {
   useEffect(()=>{
     fetch('https://fakestoreapi.com/products')
     
-    // fetch('https://jsonplaceholder.typicode.com/posts')
-    
     .then(response=> response.json())
     .then(datos => setItems (datos))
   },[])
 
   return (
-    <div className="">
+    <div className="contenedorHome">
       
       <NavBar/>
       <Filtros/>
@@ -31,6 +29,8 @@ function Home () {
           <Tarjeta key={item.id} data={item} />
         ))}
       </div>
+
+      <FiltroAvanzado/>
 
       <Footer/>
       

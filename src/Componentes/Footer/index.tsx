@@ -17,10 +17,10 @@ declare global {
 }
 
 const iconosfooter = [
-  { titulo: "Explorar", icono: <FiSearch /> },
-  { titulo: "Favoritos", icono: <IoIosHeartEmpty /> },
-  { titulo: "Mensajes", icono: <FaRegMessage /> },
-  { titulo: "Perfil", icono: <AiOutlineUser /> },
+  { titulo: "Explorar", redirigir:'', icono: <FiSearch /> },
+  { titulo: "Favoritos", redirigir:'Favoritos', icono: <IoIosHeartEmpty /> },
+  { titulo: "Mensajes", redirigir:'Mensajes', icono: <FaRegMessage /> },
+  { titulo: "Perfil", redirigir:'Usuarios', icono: <AiOutlineUser /> },
 ];
 
 const Footers = () => {
@@ -60,13 +60,12 @@ const Footers = () => {
     >
       <div className="contenedor-iconoFooter">
         {iconosfooter.map((elemento, index) => (
-          <div key={index} className="iconos-footer">
-            <span>{elemento.titulo}</span>
-            <Link to="/Favoritos">
+          <Link to={`/${elemento.redirigir}`}>
+            <div key={index} className="iconos-footer">
+              <span>{elemento.titulo}</span>
               <div className="iconoFooter">{elemento.icono}</div>
-            </Link>
-            
-          </div>
+            </div>
+          </Link>
         ))}
       </div>
 

@@ -1,0 +1,38 @@
+.contenedorAsideAbierto{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    margin: 1px;
+    background-color: white;
+    min-width: 330px;
+    width: auto;
+    height:70vh;
+    top:9.5rem;
+    align-items: center;
+    /* justify-content: center; */
+    border: solid 1px;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.contenedorFiltroAvanzado{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    top:0;
+}
+
+.contenedorAsideCerrado{
+    display: none;
+}
+
+
+.iconoCerrar{
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+
+.iconoCerrar:hover{
+    transform: rotate(90deg);
+}

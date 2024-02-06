@@ -8,6 +8,8 @@ import { TbFilterSearch } from "react-icons/tb";
 import { FaCaravan } from "react-icons/fa";
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { useRef } from 'react';
+import { useContext } from 'react';
+import { ContextoGlamping } from '../../Contexto/index'
 
 
 const Filtros = () => {
@@ -53,8 +55,10 @@ const Filtros = () => {
             }
         };
     
+        const almacenVar = useContext(ContextoGlamping)
 
     return (
+
         <div className='contenedorFiltros'>
             <div ref={contenedorFiltrosListaRef}  className='contenedorFiltrosLista'>
             
@@ -77,7 +81,7 @@ const Filtros = () => {
                 </div>
 
             </div>
-            <div className='multifiltro'>
+            <div className='multifiltro' onClick={()=>almacenVar?.abrirFiltroAvanzado()}>
                 <TbFilterSearch />       
             </div>
         </div>

@@ -11,8 +11,7 @@ function Home () {
   const [items, setItems] = useState<any>(null);
   
   useEffect(()=>{
-    fetch('https://fakestoreapi.com/products')
-    
+    fetch('https://fakestoreapi.com/products')        
     .then(response=> response.json())
     .then(datos => setItems (datos))
   },[])

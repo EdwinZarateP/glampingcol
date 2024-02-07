@@ -53,6 +53,25 @@ body{
     padding: 0 20px 0 20px;
 }
 
+.contenedorInfoBarraSuperior{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border-radius: 10px;
+    color: gray;
+}
+
+.contenedorInfoBarraSuperior >*{
+    padding: 5px;
+}
+
+.contenedorInfoBarraSuperior:hover {
+    cursor: pointer;
+    background-color: rgb(245, 242, 242);
+    
+}
+
 .nombreGlampingInferior{
     display: none;
 }
@@ -69,7 +88,7 @@ body{
 }
 
 .contenedorImagenes{
-    height: 350px;
+    height: 490px;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, minmax(150px, 1fr));

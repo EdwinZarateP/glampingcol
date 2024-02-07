@@ -30,7 +30,7 @@ function InfoGlamping () {
         <div className='barraSuperior'>
 
           <div className='nombreGlampingSuperior'>
-            <h3>{almacenVar?.glampingSeleccionado.title.substring(0, 35)}</h3>
+            <h1>{almacenVar?.glampingSeleccionado.title.substring(0, 35)}</h1>
           </div>
 
           <div className='barraSuperiorDerecha'>
@@ -69,7 +69,7 @@ function InfoGlamping () {
           </div>
 
           <div className='nombreGlampingInferior'>
-            <h3>{almacenVar?.glampingSeleccionado.title.substring(0, 35)}</h3>
+            <h2>{almacenVar?.glampingSeleccionado.title.substring(0, 35)}</h2>
           </div>
 
           <div className='informacionGeneralGlamping'>

@@ -6,6 +6,7 @@ import { FiShare } from "react-icons/fi";
 import { FaHeart } from "react-icons/fa";
 import { SlLocationPin } from "react-icons/sl";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
+import { Link } from 'react-router-dom';
 import './estilos.css'
 
 function InfoGlamping () {
@@ -43,7 +44,10 @@ function InfoGlamping () {
         <div className='barraMedia'>
           
           <div className='contenedorFotoDetalleMax'>
-          <div className='iconoRegresar'> <MdOutlineKeyboardArrowLeft/></div>          
+          <Link to="/">
+            <div className='iconoRegresar'> <MdOutlineKeyboardArrowLeft/></div> 
+          </Link>
+                   
           <div className='iconoCorazon'> <FaHeart/></div>
           <div className='iconoCompartir  '> <FiShare/> </div>
 

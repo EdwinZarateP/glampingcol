@@ -93,9 +93,9 @@ body{
     display: grid;
     grid-template-columns: repeat(4, minmax(150px, 1fr));
     grid-auto-rows: minmax(150px, auto);
-    grid-gap: 10px; 
-    border: 1px solid;
-    border-radius: 20px;
+    grid-gap: 5px; 
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .contenedorImagenes div:nth-child(1) {
@@ -107,8 +107,7 @@ body{
 .fotoDetalle {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    border-radius: 15px;
+    object-fit: cover;
 }
 
 .informacionGeneralGlamping{
@@ -136,7 +135,7 @@ body{
     }
 
     .navBar{
-    display: none;
+        display: none;
     }
 
     .nombreGlampingSuperior{
@@ -160,6 +159,7 @@ body{
         width: 100%;
         height: 100%;
         margin: 0;
+        overflow: hidden;
     }
 
     .iconoCorazon{
@@ -223,8 +223,7 @@ body{
     .FotoDetalleMax {
         width: 100%;
         height: 100%;
-        object-fit: contain;
-        border-radius: 15px;
+        object-fit: cover;
     }
 
     .nombreGlampingInferior{

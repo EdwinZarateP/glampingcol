@@ -26,7 +26,7 @@ import g9 from '../../imagenes/g9.jpg';
     { id: 6, title: "Rionegro", image: g7, price:180000, date:'14 enero', distancia:400 },
     { id: 7, title: "El retiro", image: g8, price:180000, date:'21 enero', distancia:400 },
     { id: 8, title: "Suesca", image: g9, price:120000, date:'13 enero', distancia:400 },
-    { id: 19, title: "Bajo el Xielo", image: g2, price:200000, date:'11 enero', distancia:400 },
+    { id: 9, title: "Bajo el Xielo", image: g2, price:200000, date:'11 enero', distancia:400 },
     { id: 10, title: "Paihuen", image: g3, price:305000, date:'21 enero', distancia:400 },
     { id: 11, title: "Paihuen", image: g3, price:180000, date:'14 enero', distancia:400 },
     { id: 12, title: "Terrojo", image: g4, price:180000, date:'21 enero', distancia:400 },

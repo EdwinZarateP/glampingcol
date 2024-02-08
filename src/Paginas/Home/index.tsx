@@ -3,7 +3,7 @@ import Filtros from '../../Componentes/Filtros/index'
 import Footer from '../../Componentes/Footer/index'
 import Tarjeta from '../../Componentes/Tarjeta/index'
 import FiltroAvanzado from '../../Componentes/FiltroAvanzado/index'
-// import { useState , useEffect} from 'react'
+import { useState , useEffect} from 'react'
 import './estilos.css'
 
 
@@ -37,14 +37,15 @@ import g9 from '../../Imagenes/g9.jpg';
 
 function Home () {
   //para cuando tengga la api
-  // const [items, setItems] = useState<any>(null);
-  // useEffect(()=>{
+  const [items, setItems] = useState<any>(null);
+  
+  useEffect(()=>{
     // fetch('https://fakestoreapi.com/products')
     // .then(response=> response.json())
     // .then(datos => setItems (datos))
-    // setItems(Glampings);
+   setItems(Glampings);
 
-  // },[])
+   },[])
 
   return (
     <div className="contenedorHome">
@@ -55,14 +56,9 @@ function Home () {
       <div className='contenedorTarjetas'>
 
         {/* Con esto usamos la api */}
-        {/* {items?.map((item: any) => (
+        {items?.map((item: any) => (
           <Tarjeta key={item.id} data={item} />
-        ))} */}
-
-      {Glampings.map((glamping) => (
-        <Tarjeta key={glamping.id} data={glamping} />
-      ))}
-
+        ))}
 
       </div>
 

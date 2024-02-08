@@ -73,7 +73,7 @@ function InfoGlamping () {
           </div>
 
           <div className='informacionGeneralGlamping'>
-            <span><SlLocationPin/> La Vega, Cundinamarca (Colombia) </span>
+            <span><SlLocationPin/> {almacenVar?.glampingSeleccionado.ciudad} </span>
             <span>2 huespedes</span>
             <span>1 habitacion</span>
             <span>1 baño privado</span>

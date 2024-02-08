@@ -41,12 +41,12 @@ const Tarjeta = (data: any) => {
         
         <div className='informacionSuperior'>
         <span>{data.data.title.substring(0, 35)}</span>
-        <span><FaStar /> 4.5 </span>
+        <span><FaStar />{data.data.puntuacion}</span>
         </div>
 
         <div className='informacionMedia'>
-        <span>a 300 Km</span>
-        <span>Fecha</span>
+        <span>a {data.data.distancia} Km</span>
+        <span>{data.data.date}</span>
         </div>
         
         <div className='informacionBaja'>

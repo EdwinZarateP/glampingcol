@@ -3,11 +3,11 @@ import Filtros from '../../Componentes/Filtros/index'
 import Footer from '../../Componentes/Footer/index'
 import Tarjeta from '../../Componentes/Tarjeta/index'
 import FiltroAvanzado from '../../Componentes/FiltroAvanzado/index'
-import { useState , useEffect} from 'react'
+// import { useState , useEffect} from 'react'
 import './estilos.css'
 
 
-// import g1 from '../../Imagenes/g1.jpg';
+import g1 from '../../Imagenes/g1.jpg';
 import g2 from '../../imagenes/g2.jpg';
 import g3 from '../../imagenes/g3.jpg';
 import g4 from '../../imagenes/g4.jpg';
@@ -18,45 +18,51 @@ import g8 from '../../imagenes/g8.jpg';
 import g9 from '../../imagenes/g9.jpg';
 
   const Glampings = [
-    { id: 1, title: "Terrojo", image: g4, price:310000, date:'1 enero', distancia:400},
-    { id: 2, title: "Bajo el Xielo", image: g2, price:100000, date:'11 enero', distancia:400},
-    // { id: 3, title: "Constelacion Glamping", image: g1, price:350000, date:'19 enero', distancia:400 },
-    { id: 4, title: "Aika - Tabio", image: g5, price:400000, date:'18 enero', distancia:400 },
-    { id: 5, title: "Punta de los remedios", image: g6, price:300000, date:'12 enero', distancia:400 },
-    { id: 6, title: "Rionegro", image: g7, price:180000, date:'14 enero', distancia:400 },
-    { id: 7, title: "El retiro", image: g8, price:180000, date:'21 enero', distancia:400 },
-    { id: 8, title: "Suesca", image: g9, price:120000, date:'13 enero', distancia:400 },
-    { id: 9, title: "Bajo el Xielo", image: g2, price:200000, date:'11 enero', distancia:400 },
-    { id: 10, title: "Paihuen", image: g3, price:305000, date:'21 enero', distancia:400 },
-    { id: 11, title: "Paihuen", image: g3, price:180000, date:'14 enero', distancia:400 },
-    { id: 12, title: "Terrojo", image: g4, price:180000, date:'21 enero', distancia:400 },
+    { id: 1, title: "Terrojo", image: g4, price:317000, date:'1 enero', distancia:200, ciudad:'Villa de leyva - Boyaca', bano:1, camas:1, wifi:1,nevera:1, puntuacion:5} ,
+    { id: 2, title: "Bajo el Xielo", image: g2, price:100000, date:'11 enero', distancia:300, ciudad:'San Francisco - Cundinamarca', bano:1, camas:1, wifi:1,nevera:1, puntuacion:4.5}  ,
+    { id: 3, title: "Constelacion Glamping", image: g1, price:350000, date:'19 enero', distancia:50, ciudad:'Tota - Boyaca', bano:1, camas:1, wifi:1,nevera:1, puntuacion:3.2}  ,
+    { id: 4, title: "Aika - Tabio", image: g5, price:400000, date:'18 enero', distancia:43, ciudad:'Tabio - Cundinamarca', bano:1, camas:1, wifi:1,nevera:1, puntuacion:4.5  },
+    { id: 5, title: "Punta de los remedios", image: g6, price:300000, date:'12 enero', distancia:41, ciudad:'Ibague', bano:1, camas:1, wifi:1,nevera:1, puntuacion:2.5}  ,
+    { id: 6, title: "Rionegro", image: g7, price:180000, date:'14 enero', distancia:150, ciudad:'Rionegro - Antioquia', bano:1, camas:2, wifi:1,nevera:1, puntuacion:3.5  },
+    { id: 7, title: "El retiro", image: g8, price:180000, date:'21 enero', distancia:40, ciudad:'La vega', bano:1, camas:1, wifi:1,nevera:1, puntuacion:4.1  },
+    { id: 8, title: "Suesca", image: g9, price:120000, date:'13 enero', distancia:20, ciudad:'Suesca - Cundinamarca', bano:1, camas:1, wifi:1,nevera:1, puntuacion:4  },
+    { id: 9, title: "Bajo el Xielo", image: g2, price:200000, date:'11 enero', distancia:10, ciudad:'San Francisco - Cundinamarca', bano:1, camas:1, wifi:1,nevera:1, puntuacion:4.5   },
+    { id: 10, title: "Paihuen", image: g3, price:305000, date:'21 enero', distancia:35, ciudad:'Vilavicencio - Meta', bano:1, camas:1, wifi:1,nevera:1, puntuacion:2.5  },
+    { id: 11, title: "Paihuen", image: g3, price:182100, date:'14 enero', distancia:420, ciudad:'Vilavicencio - Meta', bano:1, camas:1, wifi:1,nevera:1, puntuacion:4.4 },
+    { id: 12, title: "Terrojo", image: g4, price:180000, date:'21 enero', distancia:40, ciudad:'Villa de leyva - Boyaca', bano:1, camas:1, wifi:1,nevera:1, puntuacion:4.5  },
 
   ];
 
 
 function Home () {
-
-  const [items, setItems] = useState<any>(null);
-
-  useEffect(()=>{
+  //para cuando tengga la api
+  // const [items, setItems] = useState<any>(null);
+  // useEffect(()=>{
     // fetch('https://fakestoreapi.com/products')
     // .then(response=> response.json())
     // .then(datos => setItems (datos))
-    setItems(Glampings);
+    // setItems(Glampings);
 
-  },[])
+  // },[])
 
   return (
     <div className="contenedorHome">
 
       <NavBar/>
       <Filtros/>
-      {/* <Glampings/> */}
 
       <div className='contenedorTarjetas'>
-        {items?.map((item: any) => (
+
+        {/* Con esto usamos la api */}
+        {/* {items?.map((item: any) => (
           <Tarjeta key={item.id} data={item} />
-        ))}
+        ))} */}
+
+      {Glampings.map((glamping) => (
+        <Tarjeta key={glamping.id} data={glamping} />
+      ))}
+
+
       </div>
 
       <FiltroAvanzado/>

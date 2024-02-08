@@ -8,14 +8,15 @@ import './estilos.css'
 
 
 import g1 from '../../Imagenes/g1.jpg';
-import g2 from '../../imagenes/g2.jpg';
-import g3 from '../../imagenes/g3.jpg';
-import g4 from '../../imagenes/g4.jpg';
-import g5 from '../../imagenes/g5.jpg';
-import g6 from '../../imagenes/g6.jpg';
-import g7 from '../../imagenes/g7.jpg';
-import g8 from '../../imagenes/g8.jpg';
-import g9 from '../../imagenes/g9.jpg';
+import g2 from '../../Imagenes/g2.jpg';
+import g3 from '../../Imagenes/g3.jpg';
+import g4 from '../../Imagenes/g4.jpg';
+import g5 from '../../Imagenes/g5.jpg';
+import g6 from '../../Imagenes/g6.jpg';
+import g7 from '../../Imagenes/g7.jpg';
+import g8 from '../../Imagenes/g8.jpg';
+import g9 from '../../Imagenes/g9.jpg';
+
 
   const Glampings = [
     { id: 1, title: "Terrojo", image: g4, price:317000, date:'1 enero', distancia:200, ciudad:'Villa de leyva - Boyaca', bano:1, camas:1, wifi:1,nevera:1, puntuacion:5} ,

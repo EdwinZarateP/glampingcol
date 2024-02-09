@@ -29,7 +29,11 @@ body{
     flex-wrap:nowrap;
 
 }
-
+.nombreGlampingSuperior{
+    display: flex;
+    width: 100%;
+    margin-left: 20px;
+}
 .barraSuperior {
     display: flex;
     width: 100%;
@@ -60,6 +64,7 @@ body{
     height: 40px;
     border-radius: 10px;
     color: gray;
+    margin-bottom: 5px;
 }
 
 .contenedorInfoBarraSuperior >*{
@@ -83,11 +88,25 @@ body{
     height: 420px;
 }
 
+.ubicacionSuperior{
+    margin-bottom: 10px;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset:3px;
+    color: gray;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.ubicacionInferior{
+    display: none;
+}
 .contenedorFotoDetalleMax{
     display: none;
 }
 
 .contenedorImagenes{
+    position: relative;
     height: 490px;
     width: 100%;
     display: grid;
@@ -103,6 +122,22 @@ body{
     grid-column: 1 / 3;
     grid-row: 1 / 3;
   }
+
+.totalFotos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:90%;
+    right: 20px;
+    background-color:black;
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    color: white;
+    opacity: 0.8;
+    font-weight: 600;
+}
 
 .fotoDetalle {
     width: 100%;
@@ -152,6 +187,14 @@ body{
         display: none;
     }
 
+    .ubicacionSuperior{
+        display: none;
+    }
+
+    .ubicacionInferior{
+        display: flex;
+    }
+
     .contenedorFotoDetalleMax{
         display: flex;
         position: relative;
@@ -160,6 +203,11 @@ body{
         height: 100%;
         margin: 0;
         overflow: hidden;
+    }
+
+    .totalFotos{
+        top:85%;
+        right: 15px;    
     }
 
     .iconoCorazon{

@@ -6,6 +6,7 @@ import { FiShare } from "react-icons/fi";
 import { FaHeart } from "react-icons/fa";
 import { SlLocationPin } from "react-icons/sl";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
+import { IoMdPhotos } from "react-icons/io";
 import { Link } from 'react-router-dom';
 import './estilos.css'
 
@@ -26,18 +27,20 @@ function InfoGlamping () {
       {/* Creamos la informacion del Glamping seleccionado total */}
       
       <div className='contenedorDetalleGlamping'>
-
+        
+        <div className='nombreGlampingSuperior'>
+            <h1>{almacenVar?.glampingSeleccionado.title.substring(0, 35)}</h1>
+        </div>
+          
         <div className='barraSuperior'>
 
-          <div className='nombreGlampingSuperior'>
-            <h1>{almacenVar?.glampingSeleccionado.title.substring(0, 35)}</h1>
-          </div>
-
+          <div className='ubicacionSuperior'><SlLocationPin/> {almacenVar?.glampingSeleccionado.ciudad} </div>
+          
           <div className='barraSuperiorDerecha'>
             <div className='contenedorInfoBarraSuperior'><FiShare/> <span> Compartir </span></div>
             <div className='contenedorInfoBarraSuperior'><FaHeart/> <span> Guardar </span></div>
           </div>
-
+          
         </div>
         
 
@@ -47,17 +50,15 @@ function InfoGlamping () {
           <Link to="/">
             <div className='iconoRegresar'> <MdOutlineKeyboardArrowLeft/></div> 
           </Link>
-                   
-          <div className='iconoCorazon'> <FaHeart/></div>
-          <div className='iconoCompartir  '> <FiShare/> </div>
-
-          
+             
             <img 
             className='FotoDetalleMax'
             src={almacenVar?.glampingSeleccionado.image}
             alt={almacenVar?.glampingSeleccionado.title} />
-
+            
+            <div className='totalFotos'><IoMdPhotos style={{ marginRight: '8px' }}/> 23 Fotos</div>
           </div>
+
           
           <section>
           <div className='contenedorImagenes'>
@@ -66,14 +67,17 @@ function InfoGlamping () {
             <div><img className='fotoDetalle' src={almacenVar?.glampingSeleccionado.image} alt={almacenVar?.glampingSeleccionado.title} /></div>
             <div><img className='fotoDetalle' src={almacenVar?.glampingSeleccionado.image} alt={almacenVar?.glampingSeleccionado.title} /></div>
             <div><img className='fotoDetalle' src={almacenVar?.glampingSeleccionado.image} alt={almacenVar?.glampingSeleccionado.title} /></div>            
+            <div className='totalFotos'><IoMdPhotos style={{ marginRight: '8px' }}/> 23 Fotos</div>
           </div>
 
           <div className='nombreGlampingInferior'>
             <h2>{almacenVar?.glampingSeleccionado.title.substring(0, 35)}</h2>
           </div>
 
+          <div className='ubicacionInferior'><SlLocationPin/> {almacenVar?.glampingSeleccionado.ciudad} </div>
+
           <div className='informacionGeneralGlamping'>
-            <span><SlLocationPin/> {almacenVar?.glampingSeleccionado.ciudad} </span>
+            
             <span>2 huespedes</span>
             <span>1 habitacion</span>
             <span>1 baño privado</span>

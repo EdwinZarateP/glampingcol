@@ -158,6 +158,35 @@ body{
 
 .contenedorInformacion{
     width:70%;
+    padding: 0 20px 0 20px;
+}
+
+.descripcionLugar{
+    padding: 10px 0 10px 0;
+    border-bottom: 0.5px solid gray;
+    border-top: 0.5px solid gray;
+}
+
+.descripcionLugar p{
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; 
+    margin-bottom: 10px;
+}
+
+.descripcionLugar span{
+    text-decoration: underline;
+    text-decoration-thickness: 0.5px;
+    text-underline-offset:3px;
+    font-weight: 600;
+}
+
+.descripcionLugar h3{
+    height: 20px;
+    margin: 0;
 }
 
 .contenedorFiltrosViaje{
@@ -287,11 +316,17 @@ body{
 
     .nombreGlampingInferior{
         display: flex;
-        height: 30px;
-        justify-content: left;
-        align-items: center;
-        margin-left: 10px;        
-
+        flex-direction: column;
+        height: auto;
+        margin:0;   
+        padding-left: 20px;
+        
+    }
+    .nombreGlampingInferior :nth-child(2){
+        font-weight: 600;
+        color: gray;
+   
+        
     }
 
     .contenedorDetalleGlamping{
@@ -309,5 +344,23 @@ body{
     .contenedorImagenes {
         grid-template-columns: 1fr 1fr;
     }
+
+    .contenedorFiltrosViaje{
+        display: none;
+    }
+
+    .contenedorInformacion{
+        width:100%;
+    }
+
+    .contenedorInformacion h2 {
+        display: none;
+    }
+
+    .descripcionLugar {
+        text-align: justify;
+        padding-top: 10px;
+    }
+
 
 }

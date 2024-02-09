@@ -11,14 +11,27 @@ import { createContext, useState, ReactNode, Dispatch, SetStateAction } from 're
 //-------------------------------------------------------------------------------------
 
 interface ContextProps {
+
+  //Seleccionar si es favorito el glamping
   esFavorito: boolean;
   setEsFavorito: Dispatch<SetStateAction<boolean>>;
+
+  //Abrir Filtro avanzado
   estaAbiertoFiltroAvanzado: boolean;
   setEstaAbiertoFiltroAvanzado: Dispatch<SetStateAction<boolean>>;
   abrirFiltroAvanzado: () => void; 
   cerrarFiltroAvanzado: () => void; 
+
+  //Cual Glamping selecciono el usuario
   glampingSeleccionado: Record<string, any>; // Tipo genérico para un objeto con cualquier propiedad
   setGlampingSeleccionado: Dispatch<SetStateAction<Record<string, any>>>;
+
+  //Abrir Filtro avanzado
+  estaAbiertoAlgo: boolean;
+  setEstaAbiertoAlgo: Dispatch<SetStateAction<boolean>>;
+  abrirAlgo: () => void; 
+  cerrarAlgo: () => void; 
+
 }
 
 // Crea el contexto con un valor inicial undefined
@@ -45,6 +58,11 @@ export const ProveedorVariables: React.FC<ProveedorVariablesProps> = ({ hijo }) 
   // Estado para mostrar en /InfoGlamping todo del Glamping seleccionado
   const [glampingSeleccionado, setGlampingSeleccionado]= useState({});
 
+   // Estado para abrir y cerrar el Algo
+   const [estaAbiertoAlgo, setEstaAbiertoAlgo] = useState(false);
+   const abrirAlgo=()=>setEstaAbiertoFiltroAvanzado(true);
+   const cerrarAlgo=()=>setEstaAbiertoFiltroAvanzado(false);
+
   //-------------------------------------------------------------------------------------
   // 3. Crea el objeto de contexto con los valores y funciones necesarios que quieres proveer
   //-------------------------------------------------------------------------------------
@@ -57,7 +75,11 @@ export const ProveedorVariables: React.FC<ProveedorVariablesProps> = ({ hijo }) 
     abrirFiltroAvanzado,
     cerrarFiltroAvanzado,
     glampingSeleccionado,
-    setGlampingSeleccionado
+    setGlampingSeleccionado,
+    estaAbiertoAlgo,
+    setEstaAbiertoAlgo,
+    abrirAlgo,
+    cerrarAlgo 
   };
 
   // Renderiza el proveedor de contexto con el valor proporcionado

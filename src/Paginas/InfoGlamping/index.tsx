@@ -72,15 +72,16 @@ function InfoGlamping () {
               <div className='totalFotos'><IoMdPhotos style={{ marginRight: '8px' }}/> 23 Fotos</div>
             </div>
 
+            {/* ------------------INFORMACION GENERAL------------- */}
+
             <div className='nombreGlampingInferior'>
               <h2>{almacenVar?.glampingSeleccionado.title.substring(0, 35)}</h2>
+              <span><SlLocationPin/> {almacenVar?.glampingSeleccionado.ciudad}</span>
             </div>
-
-            <div className='ubicacionInferior'><SlLocationPin/> {almacenVar?.glampingSeleccionado.ciudad} </div>
 
           </div>
 
-          {/* ------------------INFORMACION GENERAL------------- */}
+          
 
           <div className='contenedorInformacionYFiltros'>
             
@@ -90,17 +91,13 @@ function InfoGlamping () {
               
               <div className='descripcionLugar'>
                 <h3>Acerca de este lugar</h3>
-                {almacenVar?.glampingSeleccionado.descripcion}
+                <p>{almacenVar?.glampingSeleccionado.descripcion}</p>          
+                <span> Mostrar mas...</span>
               </div>
+              
 
               <div className='amenidades'>
                 <h3>Caracteristicas y servicios</h3>
-                {almacenVar?.glampingSeleccionado.descripcion}
-                {almacenVar?.glampingSeleccionado.descripcion}
-                {almacenVar?.glampingSeleccionado.descripcion}
-                {almacenVar?.glampingSeleccionado.descripcion}
-                {almacenVar?.glampingSeleccionado.descripcion}
-                
                 <span>Capacidad: {almacenVar?.glampingSeleccionado.capacidad} huespedes</span>
               </div>
               

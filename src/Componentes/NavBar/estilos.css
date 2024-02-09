@@ -190,7 +190,9 @@
     display: none;
   }
 
-/* para dispositivos moviles */
+
+  /* --------------------------------------------------- */
+/* -------------para dispositivos moviles ---------------*/
 
 @media (max-width: 744px) {
     .barNav {
@@ -251,7 +253,7 @@
         border-width: 0.5px;
         height: 3.5rem;
         font-size: 25px;
-        margin: 0 10px 0 10px;
+        margin: 0 20px 0 10px;
     }
 
     

@@ -28,6 +28,8 @@ function InfoGlamping () {
       
       <div className='contenedorDetalleGlamping'>
         
+        {/* ------------------PARTE SUPERIOR------------- */}
+
         <div className='nombreGlampingSuperior'>
             <h1>{almacenVar?.glampingSeleccionado.title.substring(0, 35)}</h1>
         </div>
@@ -59,31 +61,66 @@ function InfoGlamping () {
             <div className='totalFotos'><IoMdPhotos style={{ marginRight: '8px' }}/> 23 Fotos</div>
           </div>
 
-          
-          <section>
-          <div className='contenedorImagenes'>
-            <div><img className='fotoDetalle' src={almacenVar?.glampingSeleccionado.image} alt={almacenVar?.glampingSeleccionado.title} /></div>
-            <div><img className='fotoDetalle' src={almacenVar?.glampingSeleccionado.image} alt={almacenVar?.glampingSeleccionado.title} /></div>
-            <div><img className='fotoDetalle' src={almacenVar?.glampingSeleccionado.image} alt={almacenVar?.glampingSeleccionado.title} /></div>
-            <div><img className='fotoDetalle' src={almacenVar?.glampingSeleccionado.image} alt={almacenVar?.glampingSeleccionado.title} /></div>
-            <div><img className='fotoDetalle' src={almacenVar?.glampingSeleccionado.image} alt={almacenVar?.glampingSeleccionado.title} /></div>            
-            <div className='totalFotos'><IoMdPhotos style={{ marginRight: '8px' }}/> 23 Fotos</div>
+          {/* ------------------IMAGENES------------- */}
+          <div>
+            <div className='contenedorImagenes'>
+              <div><img className='fotoDetalle' src={almacenVar?.glampingSeleccionado.image} alt={almacenVar?.glampingSeleccionado.title} /></div>
+              <div><img className='fotoDetalle' src={almacenVar?.glampingSeleccionado.image} alt={almacenVar?.glampingSeleccionado.title} /></div>
+              <div><img className='fotoDetalle' src={almacenVar?.glampingSeleccionado.image} alt={almacenVar?.glampingSeleccionado.title} /></div>
+              <div><img className='fotoDetalle' src={almacenVar?.glampingSeleccionado.image} alt={almacenVar?.glampingSeleccionado.title} /></div>
+              <div><img className='fotoDetalle' src={almacenVar?.glampingSeleccionado.image} alt={almacenVar?.glampingSeleccionado.title} /></div>            
+              <div className='totalFotos'><IoMdPhotos style={{ marginRight: '8px' }}/> 23 Fotos</div>
+            </div>
+
+            <div className='nombreGlampingInferior'>
+              <h2>{almacenVar?.glampingSeleccionado.title.substring(0, 35)}</h2>
+            </div>
+
+            <div className='ubicacionInferior'><SlLocationPin/> {almacenVar?.glampingSeleccionado.ciudad} </div>
+
           </div>
 
-          <div className='nombreGlampingInferior'>
-            <h2>{almacenVar?.glampingSeleccionado.title.substring(0, 35)}</h2>
-          </div>
+          {/* ------------------INFORMACION GENERAL------------- */}
 
-          <div className='ubicacionInferior'><SlLocationPin/> {almacenVar?.glampingSeleccionado.ciudad} </div>
-
-          <div className='informacionGeneralGlamping'>
+          <div className='contenedorInformacionYFiltros'>
             
-            <span>2 huespedes</span>
-            <span>1 habitacion</span>
-            <span>1 baño privado</span>
-          </div>
+            <div className='contenedorInformacion'>
+              
+              <h2>{almacenVar?.glampingSeleccionado.title.substring(0, 35)}</h2>
+              
+              <div className='descripcionLugar'>
+                <h3>Acerca de este lugar</h3>
+                {almacenVar?.glampingSeleccionado.descripcion}
+              </div>
 
-          </section>
+              <div className='amenidades'>
+                <h3>Caracteristicas y servicios</h3>
+                {almacenVar?.glampingSeleccionado.descripcion}
+                {almacenVar?.glampingSeleccionado.descripcion}
+                {almacenVar?.glampingSeleccionado.descripcion}
+                {almacenVar?.glampingSeleccionado.descripcion}
+                {almacenVar?.glampingSeleccionado.descripcion}
+                
+                <span>Capacidad: {almacenVar?.glampingSeleccionado.capacidad} huespedes</span>
+              </div>
+              
+              <span>Baño privado:  { almacenVar?.glampingSeleccionado.bano===1 ? 'Si':'No'}</span>
+          
+            </div>
+
+            <div className='contenedorFiltrosViaje'>
+            
+              Aqui van los filtros de viaje
+
+              $precios
+              y fechas
+          
+            </div>
+            
+          </div>  
+          
+
+          
 
         </div>
 

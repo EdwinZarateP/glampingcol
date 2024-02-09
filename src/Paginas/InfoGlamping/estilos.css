@@ -32,20 +32,16 @@ body{
 .nombreGlampingSuperior{
     display: flex;
     width: 100%;
-    margin-left: 20px;
+    margin-left: 5px;
+
 }
 .barraSuperior {
     display: flex;
     width: 100%;
-    max-width: 1294px;
-    min-width: 350px;
     justify-content: space-between;
     align-items: center; 
 }
 
-.barraSuperior h3 {
-    padding: 0 20px 0 20px;
-}
 
 .barraSuperiorDerecha{
     display: flex;
@@ -83,9 +79,8 @@ body{
 
 .barraMedia{
     width: 100%;
-    max-width: 1294px;
-    min-width: 744px;
-    height: 420px;
+    height: auto;
+    
 }
 
 .ubicacionSuperior{
@@ -107,7 +102,7 @@ body{
 
 .contenedorImagenes{
     position: relative;
-    height: 490px;
+    height: 400px;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, minmax(150px, 1fr));
@@ -130,12 +125,12 @@ body{
     position: absolute;
     top:90%;
     right: 20px;
-    background-color:black;
+    background-color:white;
     width: 100px;
     height: 35px;
     border-radius: 5px;
-    color: white;
-    opacity: 0.8;
+    color: black;
+    opacity: 0.9;
     font-weight: 600;
 }
 
@@ -143,23 +138,39 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: filter 0.3s ease;
+    cursor: pointer;
 }
 
-.informacionGeneralGlamping{
+.fotoDetalle:hover {
+    filter: brightness(80%); /* Cambiar el brillo al 90% cuando se pasa el mouse */
+}
+
+.contenedorInformacionYFiltros{
     display: flex;
-    flex-direction: column;
-    justify-content: left;
+    margin-top: 20px;
+    justify-content: space-between;
     align-items: left;
-    margin: 10px 0 0 10px;
     font-family: Arial;
+    background-color: white;
+    
 }
 
-.informacionGeneralGlamping > * {
-    margin:2px;
+.contenedorInformacion{
+    width:70%;
 }
 
-.informacionGeneralGlamping > :nth-child(1){
-    font-weight: 600;
+.contenedorFiltrosViaje{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    width: 20%;
+    border-radius: 15px;
+    min-width: 200px;
+    height: 400px;
+    padding: 24px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -259,7 +270,7 @@ body{
         border-radius: 50%;
         margin: 10px;
         top: 10px;
-        left: 30px; 
+        left: 15px; 
         background-color:rgb(242, 241, 241); 
         font-size: 28px; 
     }

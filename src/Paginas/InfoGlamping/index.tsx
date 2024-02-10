@@ -91,8 +91,17 @@ function InfoGlamping () {
               
               <div className='descripcionLugar'>
                 <h3>Acerca de este lugar</h3>
-                <p>{almacenVar?.glampingSeleccionado.descripcion}</p>          
-                <span> Mostrar mas...</span>
+                <p className={almacenVar?.estaAbiertoAlgo ? 'descripcionLugarAbierto' : 'descripcionLugarCerrado'}>{almacenVar?.glampingSeleccionado.descripcion}</p>          
+                
+                <span
+                  className={almacenVar?.estaAbiertoAlgo ? 'botonAbrirInfo' : 'botonCerrarInfo'}
+                  onClick={() => {
+                    almacenVar?.estaAbiertoAlgo ? almacenVar?.cerrarAlgo() : almacenVar?.abrirAlgo();
+                  }}
+                >
+                  {almacenVar?.estaAbiertoAlgo ? 'Mostrar Menos' : 'Mostrar Mas'}
+              </span>
+
               </div>
               
 

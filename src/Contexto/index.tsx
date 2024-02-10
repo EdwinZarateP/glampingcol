@@ -60,8 +60,9 @@ export const ProveedorVariables: React.FC<ProveedorVariablesProps> = ({ hijo }) 
 
    // Estado para abrir y cerrar el Algo
    const [estaAbiertoAlgo, setEstaAbiertoAlgo] = useState(false);
-   const abrirAlgo=()=>setEstaAbiertoFiltroAvanzado(true);
-   const cerrarAlgo=()=>setEstaAbiertoFiltroAvanzado(false);
+   const abrirAlgo = () => setEstaAbiertoAlgo(true);
+   const cerrarAlgo= () => setEstaAbiertoAlgo(false);
+   
 
   //-------------------------------------------------------------------------------------
   // 3. Crea el objeto de contexto con los valores y funciones necesarios que quieres proveer

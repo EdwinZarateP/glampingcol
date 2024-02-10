@@ -19,7 +19,7 @@ const Tarjeta = (data: any) => {
       <figure className='contenedorImagen'>
         
         <Link to="/InfoGlamping">
-        <img className='foto' src={data.data.image} alt={data.data.title} onClick={() =>irInfoGlamping(data.data)} />
+        <img className='foto' src={data.data.image} alt={data.data.title} onClick={() =>{almacenVar?.cerrarAlgo();irInfoGlamping(data.data);}} />
         </Link>
 
         <div className='favorito'>

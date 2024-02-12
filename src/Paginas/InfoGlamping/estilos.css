@@ -275,12 +275,12 @@ body{
         position: absolute;
         z-index:1;
         top: 20px;
-        right: 65px;
-        font-size: 18px;
+        right: 20px;
+        font-size: 25px;
         border-radius: 15px;
         background-color: white;
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
     }
 
     .favoritoFotoDetalleMax:hover{
@@ -296,12 +296,12 @@ body{
         position: absolute;
         z-index:1 ;
         top: 20px;
-        right: 25px;
-        font-size: 18px;
+        right: 75px;
+        font-size: 22px;
         border-radius: 15px;
         background-color: white;
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
     }
     
     .compartirFotoDetalleMax:hover{

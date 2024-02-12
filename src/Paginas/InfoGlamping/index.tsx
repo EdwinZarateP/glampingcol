@@ -45,7 +45,6 @@ function InfoGlamping () {
           
         </div>
         
-
         <div className='barraMedia'>
           
           <div className='contenedorFotoDetalleMax'>
@@ -57,6 +56,8 @@ function InfoGlamping () {
             className='FotoDetalleMax'
             src={almacenVar?.glampingSeleccionado.image}
             alt={almacenVar?.glampingSeleccionado.title} />
+            <div className='compartirFotoDetalleMax'> <FiShare/> </div> 
+            <div className='favoritoFotoDetalleMax'> <FaHeart/> </div> 
             
             <div className='totalFotos'><IoMdPhotos style={{ marginRight: '8px' }}/> 23 Fotos</div>
           </div>
@@ -81,8 +82,6 @@ function InfoGlamping () {
 
           </div>
 
-          
-
           <div className='contenedorInformacionYFiltros'>
             
             <div className='contenedorInformacion'>
@@ -92,7 +91,7 @@ function InfoGlamping () {
               <div className='descripcionLugar'>
                 <h3>Acerca de este lugar</h3>
                 <p className={almacenVar?.estaAbiertoAlgo ? 'descripcionLugarAbierto' : 'descripcionLugarCerrado'}>{almacenVar?.glampingSeleccionado.descripcion}</p>          
-                
+
                 <span
                   className={almacenVar?.estaAbiertoAlgo ? 'botonAbrirInfo' : 'botonCerrarInfo'}
                   onClick={() => {
@@ -125,12 +124,12 @@ function InfoGlamping () {
             
           </div>  
           
-
-          
-
         </div>
 
       </div>
+      {/* <div className='contenedorDescripcion'>
+        Descripción
+      </div> */}
       <Footer/>
     </div>
   );

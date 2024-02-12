@@ -61,6 +61,7 @@ body{
     border-radius: 10px;
     color: gray;
     margin-bottom: 5px;
+    
 }
 
 .contenedorInfoBarraSuperior >*{
@@ -69,8 +70,7 @@ body{
 
 .contenedorInfoBarraSuperior:hover {
     cursor: pointer;
-    background-color: rgb(245, 242, 242);
-    
+    background-color: rgb(245, 242, 242);  
 }
 
 .nombreGlampingInferior{
@@ -213,6 +213,18 @@ body{
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
 }
 
+.contenedorDescripcion{
+    display: flex;
+    margin: 0;
+    position:absolute;
+    justify-content: center;
+    width: 95%;
+    height: 100vh;
+    background-color: transparent;
+    border: 1px solid;
+
+}
+
 
 @media (max-width: 744px) {
     
@@ -254,6 +266,47 @@ body{
         height: 100%;
         margin: 0;
         overflow: hidden;
+    }
+
+    .favoritoFotoDetalleMax{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        z-index:1;
+        top: 20px;
+        right: 65px;
+        font-size: 18px;
+        border-radius: 15px;
+        background-color: white;
+        width: 30px;
+        height: 30px;
+    }
+
+    .favoritoFotoDetalleMax:hover{
+        cursor: pointer;
+        color:red;
+        background-color: rgb(245, 242, 242);  
+    }
+
+    .compartirFotoDetalleMax{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        z-index:1 ;
+        top: 20px;
+        right: 25px;
+        font-size: 18px;
+        border-radius: 15px;
+        background-color: white;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .compartirFotoDetalleMax:hover{
+        cursor: pointer;
+        background-color: rgb(245, 242, 242);  
     }
 
     .totalFotos{

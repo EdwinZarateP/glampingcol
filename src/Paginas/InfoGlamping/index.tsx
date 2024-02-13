@@ -7,6 +7,7 @@ import { FaHeart } from "react-icons/fa";
 import { SlLocationPin } from "react-icons/sl";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { IoMdPhotos } from "react-icons/io";
+import { IoCloseSharp } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 import './estilos.css'
 
@@ -22,7 +23,23 @@ function InfoGlamping () {
       <NavBar/>
 
       </div>
+
+      {/* Cuadro emergente donde se muestra la descripcion del lugar */}
       
+      <div className={almacenVar?.estaAbiertoAlgo ? 'fondoContenDescrOpen' : 'fondoContenDescrClose'}>
+        <div className='contenedorDescripcion'>
+          <div>
+            <IoCloseSharp 
+            className='contenedorDescripcionSuperior'
+            onClick={() => almacenVar?.cerrarAlgo()}/>
+            <h3 className='contenedorDescripcionSuperior'>Descripción</h3>  
+          </div>
+
+          <div className='contenedorDescripcionInferior'>
+            {almacenVar?.glampingSeleccionado.descripcion}
+          </div>
+        </div>  
+      </div>
       
       {/* Creamos la informacion del Glamping seleccionado total */}
       
@@ -90,18 +107,16 @@ function InfoGlamping () {
               
               <div className='descripcionLugar'>
                 <h3>Acerca de este lugar</h3>
-                <p className={almacenVar?.estaAbiertoAlgo ? 'descripcionLugarAbierto' : 'descripcionLugarCerrado'}>{almacenVar?.glampingSeleccionado.descripcion}</p>          
+                <p className='descripcionLugarAbierto'>{almacenVar?.glampingSeleccionado.descripcion}</p>          
 
                 <span
-                  className={almacenVar?.estaAbiertoAlgo ? 'botonAbrirInfo' : 'botonCerrarInfo'}
-                  onClick={() => {
-                    almacenVar?.estaAbiertoAlgo ? almacenVar?.cerrarAlgo() : almacenVar?.abrirAlgo();
-                  }}
-                >
-                  {almacenVar?.estaAbiertoAlgo ? 'Mostrar Menos' : 'Mostrar Mas'}
-              </span>
+                  className='botonAbrirInfo'
+                  onClick={() => almacenVar?.abrirAlgo()}>
+                  Mostrar mas
+                </span>
 
               </div>
+
               
 
               <div className='amenidades'>
@@ -127,9 +142,7 @@ function InfoGlamping () {
         </div>
 
       </div>
-      {/* <div className='contenedorDescripcion'>
-        Descripción
-      </div> */}
+      
       <Footer/>
     </div>
   );

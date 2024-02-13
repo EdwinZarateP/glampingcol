@@ -27,7 +27,7 @@ function InfoGlamping () {
       {/* Cuadro emergente donde se muestra la descripcion del lugar */}
       
       <div className={almacenVar?.estaAbiertoAlgo ? 'fondoContenDescrOpen' : 'fondoContenDescrClose'}>
-        <div className='contenedorDescripcion'>
+        <div className={almacenVar?.estaAbiertoAlgo ? 'contenedorDescripcionOpen' : 'contenedorDescripcionClose'}>
           <div>
             <IoCloseSharp 
             className='contenedorDescripcionSuperior'
